@@ -40,7 +40,12 @@ function extractPropertiesFromMessage(message: Message): { model: string; provid
   return { model, provider, content: cleanedContent };
 }
 
-export function streamText(messages: Messages, env: Env, options?: StreamingOptions, apiKeys?: Record<string, string>) {
+export function streamText(
+  messages: Messages,
+  env: Env,
+  options?: StreamingOptions,
+  apiKeys?: Record<string, string>
+) {
   let currentModel = DEFAULT_MODEL;
   let currentProvider = DEFAULT_PROVIDER;
 
